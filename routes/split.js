@@ -6,7 +6,7 @@ const multer = require('multer');
 const JSZip = require('jszip');
 const memoryStorage = multer.memoryStorage();
 const upload = multer({ storage: memoryStorage });
-router.get('/splitpdf', (req, res) => {
+router.get('/', (req, res) => {
     res.render('split');
 });
 router.post('/split', upload.single('file'), async (req, res) => {
